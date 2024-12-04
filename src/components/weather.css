@@ -1,6 +1,7 @@
 .weather {
   place-self: center;
   padding: 60px;
+  width: 400px;
   border-radius: 10px;
   background-image: linear-gradient(45deg, #5b7bcd, #7640ea);
   display: flex;
@@ -101,4 +102,40 @@
 .admin a img {
   width: 80px;
   color: red;
+}
+
+
+@media (max-width: 660px) {
+  * {
+    font-size: 12px;
+  }
+  .admin {
+    width: 70px;
+    height: 70px;
+  }
+  .admin a img {
+    width: 50px;
+  }
+  .weather {
+    width: 90%;
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .temperature, .location {
+    font-size: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .weather-icon {
+    width: 100px;
+  }
+  .weather-data {
+    font-size: 18px;
+  }
+  .weather {
+    padding-bottom: 100px;
+  }
 }
