@@ -1,10 +1,8 @@
 
-body {
-  background-image: linear-gradient(45deg, #5b7bcd, #7640ea);
-}
 .weather {
   place-self: center;
   padding: 40px;
+  background-image: linear-gradient(45deg, #5b7bcd, #7640ea);
   max-width: 90%;
   width: 400px;
   border-radius: 10px;
