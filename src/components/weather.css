@@ -1,22 +1,25 @@
 .weather {
   place-self: center;
-  padding: 60px;
+  padding: 40px;
+  max-width: 90%;
   width: 400px;
   border-radius: 10px;
   background-image: linear-gradient(45deg, #5b7bcd, #7640ea);
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 5px 16px rgb(0,0,0,.6);
+  box-shadow: 2px 5px 16px rgb(0, 0, 0, 0.6);
 }
 
 .search-bar {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: 100%;
 }
 
 .search-bar input {
+  flex: 1;
   height: 50px;
   border: none;
   outline: none;
@@ -36,106 +39,103 @@
 }
 
 .weather-icon {
-  width: 150px;
-  padding: 50px 0;
+  width: 120px;
+  padding: 30px 0;
 }
 
 .temperature {
   color: #fff;
-  font-size: 80px;
+  font-size: 60px;
   line-height: 1;
+  text-align: center;
 }
 
 .location {
   color: #fff;
-  font-size: 40px;
+  font-size: 30px;
+  text-align: center;
 }
 
 .weather-data {
-    width: 100%;
-    margin-top: 40px;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  margin-top: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .weather-data .col {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-    font-size: 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 18px;
+  flex: 1 1 45%; /* Moslashuvchan o‘lcham */
 }
 
-
 .weather-data .col span {
-    display: block;
-    font-size: 16px;
+  display: block;
+  font-size: 14px;
 }
 
 .weather-data .col img {
-    width: 26px;
-    margin-top: 10px;
+  width: 26px;
+  margin-top: 10px;
 }
 
 .loading {
   color: rgb(111, 200, 225);
-  font-size: 20px;
-  padding: 30px;
+  font-size: 18px;
+  padding: 20px;
+  text-align: center;
 }
 
 .admin {
-  position: absolute;
+  position: fixed;
   right: 20px;
   bottom: 20px;
   cursor: pointer;
-  width: 90px;
-  height: 90px;
+  width: 70px;
+  height: 70px;
   border: 1px solid green;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
   padding: 10px;
-  box-shadow: 2px 4px 16px rgb(0,0,0, .4);
+  box-shadow: 2px 4px 16px rgb(0, 0, 0, 0.4);
 }
 
 .admin a img {
-  width: 80px;
+  width: 60px;
   color: red;
 }
 
-
-@media (max-width: 660px) {
-  * {
-    font-size: 12px;
-  }
-  .admin {
-    width: 70px;
-    height: 70px;
-  }
-  .admin a img {
-    width: 50px;
-  }
+/* Kichik ekranlar uchun responsiv o'lcham */
+@media (max-width: 768px) {
   .weather {
-    width: 90%;
-    height: 60vh;
+    padding: 20px;
+    max-width: 100%;
   }
-}
 
-@media (max-width: 480px) {
-  .temperature, .location {
-    font-size: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .temperature {
+    font-size: 50px;
   }
+
+  .location {
+    font-size: 24px;
+  }
+
   .weather-icon {
     width: 100px;
   }
-  .weather-data {
-    font-size: 18px;
+
+  .weather-data .col {
+    font-size: 16px;
   }
-  .weather {
-    padding-bottom: 100px;
+
+  .weather-data .col span {
+    font-size: 12px;
   }
 }
